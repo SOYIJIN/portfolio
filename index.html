@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title> 소이진 포트폴리오 </title>
+    
+    <link rel="stylesheet" href="./lib/setup.css">
+    <script src="./lib/jquery.js"></script>
+
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="./lib/portfolio.css">
+
+    <!-- 슬라이드 연결링크 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7fb4a53106.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+  
+  <header>
+      
+        <div class="wrap">
+            <div class="flex">
+                <a href="#" id="logo">
+                    <h1>SYJ</h1>
+                </a>
+                <!-- 상단메뉴 -->
+                <nav id="menu">
+                    <ul>
+                        <li class="view"><a href="#home">HOME</a></li>
+                        <li><a href="#about">RESUME</a></li> 
+                        <li><a href="#portfolio">PORTFOLIO</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div id="mobile">
+                    <div class="line">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="menuBox">
+                        <ul>
+                            <li class="view"><a href="#home">HOME</a></li>
+                            <li><a href="#about">RESUME</a></li> 
+                            <li><a href="#portfolio">PORTFOLIO</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+  </header>
+   
+   <main>
+       
+       <!-- Home -->
+       <div id="home">
+            <div class="box">
+                <div class="wave -one"></div>
+                <div class="wave -two"></div>
+                <div class="wave -three"></div>
+            </div>
+            <div class="wrap">
+                <div class="title">
+                    <div class="job">SOYIJIN <br> PORTFOLIO</div>
+                </div>
+                <a href="#about" class=" btn-scroll scrollto" title="Scroll Down">
+                    <i class="icon fa-solid fa-angles-down"></i>
+                </a>
+            </div>
+       </div>
+
+       <!-- About Me -->
+       <div id="about" class="section">
+            <div class="wrap">
+                <!-- 공통 제목 -->
+                <div class="title">
+                    <div class="name">ABOUT ME<span>.</span></div>
+                </div>
+            </div>
+        <!-- 소개글 -->
+            <div class="profile">
+                <div class="wrap">
+                    <div class="content">
+                        <ul class="grid">
+                            <li>
+                                <div class="p_img">
+                                    <img src="" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="intro">
+                                    처음 퍼블리싱을 배웠을 때 타홈페이지를 보며 제가 배운 기술들로 홈페이지를 어떤식으로 구현해야 <br class="br">
+                                    수많은 사람들이 내가 만든 홈페이지를 볼 때 가독성이 좋고 시안성에 문제가 없을까 라는 생각을 많이 <br class="br">  해왔습니다.
+                                    그런 생각들을 하며 클론 코딩을 하여 홈페이지들을 구현해보기 시작했고 에러 또는 배우지 <br class="br">  못한 기술이 나오면 혼자서 찾아 공부를 하였습니다.
+                                    
+                                    <br><br>
+                                    
+                                    그렇게 하면서 퍼블리싱보다 더 많은 것에 관심에 가지게 되고 혼자만의 힘으로 홈페이지를 만들고 <br class="br"> 완성해보니 
+                                    저의 부족함을 깨닫게 되었고 개발자와 코딩에 대해 더 많이 알아보고 공부하여 제 자신을 <br class="br"> 발전시키고 싶어
+                                    프론트엔드 개발자 과정을 알아보고 시작하게 되었습니다. 
+                                    
+                                    <br><br>
+                                    
+                                    짧은 기간 공부를 통해 전문적인 지식 또는 기술을 익히는 것은 쉬운일이 아니고  어려울 수 있다고 <br class="br">
+                                    생각하지만 배움에 겁먹지 않고 열정으로 도전하고 노력하여 끊임없이 개발하는 개발자의 길에 <br class="br"> 서게되었습니다.
+                
+                                    <br><br>
+                
+                                    현재는 많이 부족하고 배울 점이 많겠지만
+                                    <span>남이 한 번 할 때, 나는 백 번을 해서라도 따라간다(人一己百)</span> <br class="br"> 라는 
+                                    말처럼 노력하고 배워 제 자신을 발전시킬 수 있는 프론트엔드 개발자가 되겠습니다.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resume">
+                        <ul class="grid">
+                            <li>
+                                <!-- 스킬 -->
+                                <div class="skill">
+                                    <div class="skillName"><span>#</span> SKILL</div>
+                                    <ul class="graph">
+                                        <li title="HTML" persent="95"></li>
+                                        <li title="CSS" persent="90"></li>
+                                        <li title="JavaScript" persent="60"></li>
+                                        <li title="jQuery" persent="75"></li>
+                                        <li title="Node.js" persent="50"></li>
+                                        <li title="React" persent="50"></li>
+                                        <li title="PHOTOSHOP" persent="80"></li>
+                                        <li title="ILLUSTRATOR" persent="90"></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <!-- 학력 및 경력 -->
+                                <div class="educ">
+                                    <div class="educName"><span>#</span> EDUCATION</div>
+                                    <div class="educInfo">202208 ~ 202212 <br> <span>코리아IT아카데미 프론트엔드 과정 수료</span></div>
+                                    <div class="educInfo">202107 ~ 202207 <br> <span>(주) 피엠헬스케어 웹디자이너 근무</span></div>
+                                    <div class="educInfo">202103 ~ 202107 <br> <span>더조은컴퓨터학원 웹퍼블리셔 과정 수료</span></div>
+                                    <div class="educInfo">201603 ~ 201902 <br> <span>수원영생고등학교 졸업</span></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+       </div>
+       
+       <!-- Portfolio -->
+       <div id="portfolio" class="section">
+            <div class="wrap">
+                <!-- 공통제목 -->
+                <div class="title">
+                    <div class="name">PORTFOLIO<span>.</span></div>
+                </div>
+                <!-- 제작물 -->
+                <div class="result">
+                    <ul class="grid">
+                        <!-- 1번 -->
+                        <li>
+                            <a href="#" class="img"><img src="" alt=""></a>
+                            <div class="title">
+                                <div class="project">PROJECT01</div>
+                                <div class="period">제작기간 0000.00.00</div>
+                                <div class="program">html css JavaScript jQuery</div>
+                            </div>
+                        </li>
+                        <!-- 2번 -->
+                        <li>
+                            <a href="#" class="img"><img src="" alt=""></a>
+                            <div class="title">
+                                <div class="project">PROJECT02</div>
+                                <div class="period">제작기간 0000.00.00</div>
+                                <div class="program">html css JavaScript jQuery</div>
+                            </div>
+                        </li>
+                        <!-- 3번 -->
+                        <li>
+                            <a href="#" class="img"><img src="" alt=""></a>
+                            <div class="title">
+                                <div class="project">PROJECT03</div>
+                                <div class="period">제작기간 0000.00.00</div>
+                                <div class="program">html css JavaScript jQuery</div>
+                            </div>
+                        </li>
+                        <!-- 4번 -->
+                        <li>
+                            <a href="#" class="img"><img src="" alt=""></a>
+                            <div class="title">
+                                <div class="project">PROJECT04</div>
+                                <div class="period">제작기간 0000.00.00</div>
+                                <div class="program">html css JavaScript jQuery</div>
+                            </div>
+                        </li>
+                        <!-- 5번 -->
+                        <li>
+                            <a href="#" class="img"><img src="" alt=""></a>
+                            <div class="title">
+                                <div class="project">PROJECT05</div>
+                                <div class="period">제작기간 0000.00.00</div>
+                                <div class="program">html css JavaScript jQuery</div>
+                            </div>
+                        </li>
+                        <!-- 6번 -->
+                        <li>
+                            <a href="#" class="img"><img src="" alt=""></a>
+                            <div class="title">
+                                <div class="project">PROJECT06</div>
+                                <div class="period">제작기간 0000.00.00</div>
+                                <div class="program">html css JavaScript jQuery</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+       </div>
+       
+   </main>
+   
+   <footer>
+
+        <!-- Contact -->
+       <div id="contact">
+                <div class="title">
+                    <div class="ment">나누고 싶은<br class="br"> 얘기가 있으시다면<span>.</span></div>
+                </div>
+                <div class="contact">
+                    <div class="wrap">
+                        <form id="form">
+                            <div class="field">
+                                <label 
+                                    for="from_name" 
+                                    style="font-size: 18px; line-height: 45px; margin-right: 60px; text-align: left; "
+                                > Name </label>
+                                <input type="text" name="from_name" placeholder="이름을 입력해주세요" id="from_name">
+                            </div>
+                            <div class="field">
+                                <label for="tel" style="font-size: 18px; line-height: 45px; margin-right: 85px;">Tel</label>
+                                <input type="text" name="tel" placeholder="전화번호를 입력해주세요" id="tel">
+                            </div>
+                            <div class="field">
+                                <label for="message" style="font-size: 18px; line-height: 45px; margin-right: 37px;">Message</label>
+                                <textarea name="message" placeholder="내용을 입력해주세요" id="message" cols="30" rows="10"></textarea>
+                            </div>
+                            <!-- 버튼 -->
+                            <input type="submit" id="button" value="SEND MAIL" >
+                        </form>
+                    </div>
+                    <div class="info">
+                        <div class="address">본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다. <br> © 2021 YIJIN SO. All Rights Reserved.</div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- 이메일 스크립트 폼 -->
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+        <script type="text/javascript">
+            emailjs.init('blhQVbQ5eGNaRX-Iv');
+
+            const btn = document.getElementById('button');
+
+            document.getElementById('form')
+            .addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            btn.value = 'Sending...';
+
+            const serviceID = 'service_f8bnlao';
+            const templateID = 'template_q8025c3';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                btn.value = 'Send Email';
+                alert('메일보내기 성공');
+                }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+                });
+            });
+
+    </script>
+       
+   </footer>
+    
+</body>
+<script>
+
+    $(function(){
+        $(window).scroll(function(){
+            const top = $(this).scrollTop();
+            
+            /* header 상단메뉴바 */
+            if(top > 70){
+                $("header").addClass("view");
+            }else{
+                $("header").removeClass("view");
+            }
+            
+            /* 스킬 */
+            let section = $("#about .profile  .resume .grid li .skill");
+            
+            section.each(function(){
+                const pos = $(this).offset().top -700;
+                if(top > pos){
+                    $(this).addClass("view");
+                }
+            });
+
+            /* 포트폴리오 */
+            let grid = $("#portfolio");
+
+            grid.each(function(){
+                const pos = $(this).offset().top -700;
+                if(top > pos){
+                    $(this).addClass("view");
+                }
+            });
+            
+        });
+
+        var tap = $('header #menu ul li');
+            tap.on('click', function(){
+                const index = $(this).index();
+                tap.removeClass('view');
+                $(this).addClass('view');
+            });
+
+        // 모바일 메뉴버튼 클릭
+        $('header #mobile').on('click', function(){
+            $('#mobile').toggleClass('view');
+        })
+
+    });
+    
+</script>
+</html>

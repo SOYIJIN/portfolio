@@ -1,0 +1,1065 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 화면 스크롤 없애기 */
+body::-webkit-scrollbar {
+    width: 0px;
+}
+body::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+body::-webkit-scrollbar-thumb {
+    background: #666;
+}
+body::-webkit-scrollbar-button {
+    display: none;
+}
+
+body{
+    font-family: 'Pretendard-Regular';
+}
+
+/* 상단메뉴설정 */
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1003;
+    color: #fff;
+    padding: 35px 50px;
+    transition: all .5s;
+}
+header.view{
+    padding: 20px 40px;
+}
+
+header:hover, header.view{
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0px -1px 4px 0px #0009;
+}
+
+#logo{}
+#logo h1{
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: -10px;
+}
+
+#menu ul li{}
+
+#menu ul li.view a{
+    color: #5a3686;
+    font-weight: bold;
+}
+#menu ul li:nth-child(3).view a{
+    color: #EBC5DF;
+}
+#menu ul li:nth-child(4).view a{
+    color: rgb(116, 178, 203);
+}
+
+#menu ul li a{
+    font-size: 17px;
+    line-height: 40px;
+    margin: 0px 30px;
+}
+
+#mobile{
+    display: none;
+}
+header #mobile{}
+
+header #mobile .line{
+    width: 40px;
+    height: 40px;
+    transition: all .5s;
+    position: relative;
+    z-index: 1000;
+}
+header #mobile .line span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    z-index: 999;
+}
+header.view #mobile .line span{
+    background-color: #000;
+}
+header:hover #mobile .line span{
+    background-color: #000;
+}
+
+header #mobile.view .line span{
+    transition: all .5s;
+    top: 50%;
+    left: 120%;
+    background-color: #000;
+}
+
+/* 메뉴 줄 3개 */
+header #mobile .line span:nth-child(1){
+    transform: translate(-50%,-50%) translateY(-6px);
+}
+header #mobile .line span:nth-child(3){
+    transform: translate(-50%,-50%) translateY(6px);
+}
+
+/* X 만들기 */
+header #mobile.view .line span:nth-child(2){
+    opacity: 0;
+}
+
+header #mobile.view .line span:nth-child(1){
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+header #mobile.view .line span:nth-child(3){
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+header #mobile .menuBox{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 998;
+    transform: translateX(100%);
+    transition: transform 1s;
+}
+header #mobile.view .menuBox{
+    transform: translate(0%);
+}
+header #mobile .menuBox ul{
+    margin-top: 115px;
+} 
+header #mobile .menuBox ul li{
+    width: 100%;
+}
+header #mobile .menuBox ul li a{
+    width: 100%;
+    text-align: left;
+    color: #000;
+    padding: 0px 50px;
+    line-height: 40px;
+    margin: 10px 0px;
+    font-size: 20px;
+}
+
+/* 호버색 */
+header #mobile .menuBox ul li a:hover{
+    font-weight: bold;
+    color: #D0BBEA;
+}
+header #mobile .menuBox ul li:nth-child(3) a:hover{
+    color: #EBC5DF;
+}
+header #mobile .menuBox ul li:nth-child(4) a:hover{
+    color: rgb(116, 178, 203);
+}
+
+/* 포트폴리오 메인 */
+#home{
+    font-family: 'HS-Regular';
+    background-image: url(../img/home_img.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+#home .box{
+    position: absolute;
+    top: 5%;
+    right: 30%;
+}
+#home .box .wave{
+    position: absolute;
+    opacity: 0;
+    width: 1300px;  /* 퍼센트 부모 기준 ,, %나 vh */
+    height: 1000px;  /* 퍼센트 부모 기준 ,, %나 vh */
+    margin-left: -150px;
+    margin-top: -250px;
+    border-radius: 43%;
+}
+#home .box .wave.-one{
+    animation: rotate 7000ms infinite linear;
+    opacity: 1;
+    background-color: #D0BBEA;
+}
+#home .box .wave.-two {
+    animation: rotate 3000ms infinite linear;
+    opacity: .1;
+    background: #F2EEE5;
+}
+  
+#home .box .wave.-three {
+    animation: rotate 7500ms infinite linear;
+    background-color: #C3E2DD;
+}
+
+#home .title{
+    text-align: left;
+    position: absolute;
+    top: 35vh;
+    color: #fff;
+}
+#home .title .job{
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 7px;
+}
+
+#home .btn-scroll{
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: 0.4s;
+    color: #fff;
+    animation: up-down 1s ease-in-out infinite alternate-reverse both;
+}
+#home .btn-scroll i{
+    font-size: 48px;
+}
+#home .btn-scroll  .icon::before{
+    content: '\f103';
+}
+
+/* 공통설정(제목) */
+.section{
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section .wrap > .title{
+    text-align: center;
+    margin: 70px 0;
+    letter-spacing: 10px;
+}
+.section .wrap > .title .name{
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+}
+.section .wrap > .title .name span{
+    color: #D0BBEA;
+}
+
+/* 프로필 사진 및 소개글 */
+#about{}
+#about .wrap > .title{
+    margin: 100px 0 50px 0;
+}
+
+#about .profile{
+    border: 1px solid #ccc;
+    width: 1300px;
+    height: 940px;
+    margin: 0 auto;
+    padding: 70px;
+}
+#about .profile .content{}
+
+#about .profile .content > .grid{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    column-gap: 40px;
+}
+#about .profile .content > .grid li{}
+
+#about .profile .content > .grid li .p_img{
+    width: 400px;
+    height: 430px;
+    background-color: #ccc;
+}
+#about .profile .content > .grid li .p_img img{}
+
+#about .profile .content > .grid li .intro{
+    padding-top: 10px;
+    font-size: 18px;
+    text-align: left;
+}
+#about .profile .content > .grid li .intro span{
+    font-weight: bold;
+}
+
+/* 스킬 및 경력 */
+#about .profile .resume{
+    margin-top: 70px;
+}
+#about .profile .resume .grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 40px;
+}
+#about .profile .resume .grid li{}
+
+/* RESUME - 스킬 */
+#about .profile  .resume .grid li .skill{
+    text-align: left;
+    color: #333;
+}
+
+#about .profile .resume .grid li .skill .skillName{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+#about .profile .resume .grid li .skill .skillName span{
+    font-size: 28px;
+    font-weight: bold;
+    color: #D0BBEA;
+}
+
+#about .profile .resume .grid li .skill .graph{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;  
+    /* 오른쪽만 여백주기 */
+}
+#about .profile .resume .grid li .skill .graph li{
+    position: relative;
+    background-color: #F3F3F3;
+    height: 42px;
+    margin-bottom: 21px;
+    border-radius: 30px;
+}
+
+#about .profile .resume .grid li .skill .graph li:before{
+    content: attr(title);
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color:white;
+    z-index: 2;
+    font-size: 14px;
+}
+#about .profile .resume .grid li .skill .graph li:after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0%;
+    background-color: #D0BBEA;
+    transition: width 2s;
+    border-radius: 30px;
+}        
+
+#about .profile .resume .grid li .skill.view .graph li[persent="95"]:after{
+    width: 95%;
+}
+#about .profile .resume .grid li .skill.view .graph li[persent="90"]:after{
+    width: 90%;
+}
+#about .profile .resume .grid li .skill.view .graph li[persent="60"]:after{
+    width: 60%;
+}
+#about .profile .resume .grid li .skill.view .graph li[persent="75"]:after{
+    width: 75%;
+}
+#about .profile .resume .grid li .skill.view .graph li[persent="50"]:after{
+    width: 50%;
+}
+#about .profile .resume .grid li .skill.view .graph li[persent="50"]:after{
+    width: 50%;
+}
+#about .profile .resume .grid li .skill.view .graph li[persent="80"]:after{
+    width: 80%;
+}
+#about .profile .resume .grid li .skill.view .graph li[persent="90"]:after{
+    width: 90%;
+}
+
+/* RESUME - 경력 */
+#about .profile .resume .grid li .educ{
+    text-align: left;
+    color: #333;
+    padding-left: 30px;
+}
+
+#about .profile .resume .grid li .educ .educName{
+    font-size: 28px;
+    font-weight: bold;
+}
+#about .profile .resume .grid li .educ .educName span{
+    font-size: 28px;
+    font-weight: bold;
+    color: #D0BBEA;
+}
+
+#about .profile .resume .grid li .educ .educInfo{
+    margin-top: 24px;
+    font-size: 14px;
+}
+#about .profile .resume .grid li .educ .educInfo span{
+    font-weight: bold;
+}
+
+
+/* 포트폴리오 */
+#portfolio .wrap > .title{
+    margin: 100px 0 60px 0;
+}
+#portfolio .wrap > .title .name span{
+    color: #EBC5DF
+}
+
+#portfolio .result{}
+
+#portfolio .result .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+#portfolio .result .grid li{
+    position: relative;
+    overflow: hidden;
+    background-color: #ccc;
+    height: 400px;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s;
+}
+
+/* 그리드 윤곽 */
+#portfolio .result .grid li:nth-child(3){
+    border-top-right-radius: 70px;
+}
+#portfolio .result .grid li:nth-child(4){
+    border-bottom-left-radius: 70px;
+}
+
+
+/* 포트폴리오 애니메이션 */
+#portfolio.view .result .grid li{ 
+    opacity: 1;
+    transform: translateY(0px);
+}
+main #portfolio.view .result .grid li:nth-child(1){
+    transition: all 1s 0s;
+}
+main #portfolio.view .result .grid li:nth-child(2){
+    transition: all 1s .2s;
+}
+main #portfolio.view .result .grid li:nth-child(3){
+    transition: all 1s .4s;
+}
+main #portfolio.view .result .grid li:nth-child(4){
+    transition: all 1s .6s;
+}
+main #portfolio.view .result .grid li:nth-child(5){
+    transition: all 1s .8s;
+}
+main #portfolio.view .result .grid li:nth-child(6){
+    transition: all 1s 1.0s;
+}
+
+#portfolio .result .grid li:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    background-color: #0007;
+    opacity: 0;
+    transition: opacity .5s;
+    z-index: 1;
+}
+#portfolio .result .grid li:hover:after{
+    opacity: 1;
+}
+
+/* 포트폴리오 이미지설정 */
+#portfolio .result .grid li .img{
+    width: 100%;
+}
+#portfolio .result .grid li .img img{
+    width: 100%;
+    transition: transform .5s;
+}
+main #portfolio .grid li:hover .img img{
+    transform: scale(1.2);
+}
+
+#portfolio .result .grid li .title{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 2;
+}
+
+#portfolio .grid li .title .project{
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(40px);
+    margin: 0px 30px;
+    padding: 85px 0 0;
+    height: 265px;
+}
+#portfolio .grid li:hover .title .project{
+    animation: title .5s linear 0s 1;
+    animation-fill-mode: forwards;
+}
+
+#portfolio .grid li .title .period{
+    color: #bbb;
+    padding-top: 20px;
+    margin: 0 30px;
+    font-size: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transform: translateY(40px);
+}
+#portfolio .grid li:hover .title .period{
+    animation: title .5s linear 0.2s 1;
+    animation-fill-mode: forwards;
+}
+
+#portfolio .grid li .title .program{
+    color: #bbb;
+    padding-top: 3px;
+    margin: 0 30px;
+    font-size: 15px;
+    opacity: 0;
+    transform: translateY(40px);
+}
+#portfolio .grid li:hover .title .program{
+    animation: title .5s linear 0.2s 1;
+    animation-fill-mode: forwards;
+}
+
+/* Contact */
+#contact{
+    margin-top: 150px
+}
+#contact .ment{
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 13px;
+    color: #333;
+    margin-bottom: 30px;
+}
+#contact .ment .br{
+    display: none;
+}
+
+#contact .ment span{
+    color: rgb(116, 178, 203);
+}
+
+#contact .contact{
+    background-color: #000;
+    width: 100%;
+    height: 660px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Contact 이메일 폼 양식 */
+#form{
+    padding-top: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+#form .field{
+    margin: 10px 0;
+}
+
+#form .field > input{
+    font-family: 'Pretendard-Regular';
+    background-color: transparent; 
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #fff;
+    width: 1180px;
+    height: 45px;
+    padding: 0 7px;
+    font-size: 16px;
+    color: #fff;
+}
+#form .field > input:focus{
+    outline: none;   /* 아웃라인 지우기 */
+    color: white 
+}
+#form .field > input::placeholder{
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.3)
+}
+
+#form .field > #message{
+    font-family: 'Pretendard-Regular';
+    background-color: transparent; 
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid #fff;
+    width: 1180px;
+    height: 250px;
+    padding: 12px 7px;
+    font-size: 16px;
+    color: #000;
+}
+#form .field > #message:focus{
+    outline: none;   /* 아웃라인 지우기 */
+    color: white 
+}
+#form .field > #message::placeholder{
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.3)
+}
+
+#button{
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 50px;
+    background-color: #000;
+    color: #FFF;
+    border: 1px solid #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all .5s;
+    cursor: pointer;
+}
+#button:hover{
+    background-color: rgb(116, 178, 203);
+    border-color: rgb(116, 178, 203);
+    letter-spacing: 3px;
+}
+
+.contact .info{
+    padding: 25px 0;
+    margin-top: 45px;
+    border-top: 1px solid #555;
+    color: #555;
+}
+
+/* 메인 도형 애니메이션 */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+}
+
+/* 메인 화살표 애니메이션 */
+@keyframes up-down{
+    0%{
+        bottom: 8%;
+        opacity: 1;
+    }
+    100%{
+        bottom: 10%;
+        opacity: 0;
+    }
+}
+
+/* 포트폴리오 hover 애니메이션 */
+@keyframes title{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* 반응형 */
+@media screen and (min-width: 100px) and (max-width: 480px) {
+    .wrap{
+        padding: 0;
+    }
+
+    header{
+        padding: 30px 40px;
+    }
+
+    #logo h1 {
+        font-size: 33px;     
+        letter-spacing: -9px;
+    }
+    
+    #menu{
+        display: none;
+    }
+    #mobile{
+        display: block;
+    }
+
+    #home .title{
+        top: 40vh;
+    }
+    #home .title .job{
+        font-size: 30px;
+        letter-spacing: 5px;
+        position: absolute;
+        left: 50px;
+    }
+    #home .btn-scroll i {
+        font-size: 40px;
+    }
+
+    .section .wrap > .title .name {
+        font-size: 30px;
+    }
+
+    #about{
+        height: 1600px;
+    }
+    #about .wrap > .title {
+        margin: 70px 0 35px 0;
+    }
+
+    /* 사진 및 자기소개 */
+    #about .profile {
+        border: none;
+        width: 100%;
+        /* height: 1350px; */
+        padding: 0px;
+    }
+    
+    #about .profile .content > .grid {
+        display: block;
+    }
+    #about .profile .content > .grid li .p_img{
+        width: 340px;
+        height: 360px;
+    }
+    #about .profile .content > .grid li .intro {
+        font-size: 15px;
+        padding: 30px 40px 0 40px;
+    }
+    #about .profile .content > .grid li .intro .br{
+        display: none;
+    }
+
+    /* 스킬 및 경력 */
+    #about .profile .resume {
+        margin-top: 40px;
+        padding: 0 40px;
+    }
+    #about .profile .resume .grid {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+    #about .profile .resume .grid li .skill .skillName {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    #about .profile .resume .grid li .skill .graph {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+    #about .profile .resume .grid li .skill .graph li {
+        height: 35px;
+        margin-bottom: 10px;
+    }
+
+    #about .profile .resume .grid li .educ {
+        padding-left: 0;
+    }
+    #about .profile .resume .grid li .educ .educName {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+    #about .profile .resume .grid li .educ .educInfo {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* 포트폴리오 */
+    #portfolio{
+        padding: 0px 40px;
+        height: 2100px;
+    }
+    #portfolio .wrap > .title {
+        margin: 0 0 35px 0;
+    }
+    #portfolio .result .grid {
+        grid-template-columns: 1fr;
+    }
+    #portfolio .result .grid li {
+        height: 300px;
+    }
+
+    #portfolio .result .grid li:nth-child(3) {
+        border-top-right-radius: 0;
+    }
+    #portfolio .result .grid li:nth-child(4) {
+        border-bottom-left-radius: 0;
+    }
+
+    #portfolio .grid li .title .project {
+        font-size: 30px;
+        font-weight: bold;
+        padding: 60px 0 0;
+        height: 185px;
+    }
+    #portfolio .grid li .title .period {
+        font-size: 13px;
+    }
+
+    #contact {
+        margin-top: 0;
+        height: 650px;
+    }
+    #contact .ment{
+        font-size: 30px;
+        line-height: 38px;
+        margin-bottom: 25px;
+    }
+    #contact .ment .br{
+        display: block;
+    }
+
+    #contact .contact{
+        padding: 0 40px;
+        height: 615px;
+    }
+
+    #form {
+        padding-top: 25px;
+    }
+    #form .field > label{
+        font-size: 15px;
+        margin-right: 12px;
+    }
+    #form .field > input {
+        width: 285px;
+        font-size: 14px;
+    }
+    #form .field > #message {
+        width: 285px;
+        font-size: 14px;
+    }
+
+    #button {
+        width: 170px;
+        height: 45px;
+        font-size: 13px;
+        line-height: 45px;
+    }
+
+    .contact .info {
+        margin-top: 35px;
+    }
+    .contact .address{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 100px) and (max-width: 360px) {
+    .wrap{
+        padding: 0;
+    }
+
+    header{
+        padding: 25px 30px;
+    }
+    header.view{
+        padding: 20px 25px;
+    }
+
+    #logo h1 {
+        font-size: 28px;
+        letter-spacing: -8px;
+    }
+    
+    #menu{
+        display: none;
+    }
+    #mobile{
+        display: block;
+    }
+
+    header #mobile .menuBox {
+        width: 225px;
+    }
+    header #mobile .menuBox ul li a {
+        padding: 0px 30px;
+        margin: 3px 0px;
+        font-size: 18px;
+    }
+    
+    #home .title{
+        top: 40vh;
+    }
+    #home .title .job{
+        font-size: 25px;
+        left: 30px;
+    }
+    #home .btn-scroll i {
+        font-size: 35px;
+    }
+
+    .section .wrap > .title{
+        letter-spacing: 7px;
+    }
+    .section .wrap > .title .name {
+        font-size: 25px;
+    }
+
+    #about .wrap > .title {
+        margin: 60px 0 35px 0;
+    }
+
+    /* 사진 및 자기소개 */
+    #about .profile {
+        margin-bottom: 400px;
+    }
+    
+    #about .profile .content > .grid {
+        display: block;
+    }
+    #about .profile .content > .grid li .p_img{
+        width: 280px;
+        height: 300px;
+    }
+    #about .profile .content > .grid li .intro {
+        font-size: 14px;
+        padding: 30px 20px 0 20px;
+    }
+    #about .profile .content > .grid li .intro .br{
+        display: none;
+    }
+
+    /* 스킬 및 경력 */
+    #about .profile .resume {
+        padding: 0 20px;
+    }
+    #about .profile .resume .grid {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+    #about .profile .resume .grid li .skill .skillName {
+        font-size: 21px;
+    }
+    #about .profile .resume .grid li .skill .graph {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+    #about .profile .resume .grid li .skill .graph li {
+        height: 28px;
+    }
+    #about .profile .resume .grid li .skill .graph li:before {
+        font-size: 12px;
+    }
+
+    #about .profile .resume .grid li .educ {
+        padding-left: 0;
+    }
+    #about .profile .resume .grid li .educ .educName {
+        font-size: 21px;
+    }
+    #about .profile .resume .grid li .educ .educInfo {
+        font-size: 13px;
+        display: block;
+    }
+
+    /* 포트폴리오 */
+    #portfolio{
+        padding: 0px 20px;
+    }
+    #portfolio .wrap > .title {
+        margin: 60px 0 35px 0;
+    }
+
+    #portfolio .result .grid li {
+        height: 200px;
+    }
+
+    #portfolio .result .grid li:nth-child(3) {
+        border-top-right-radius: 0;
+    }
+    #portfolio .result .grid li:nth-child(4) {
+        border-bottom-left-radius: 0;
+    }
+
+    #portfolio .grid li .title .project {
+        font-size: 23px;
+        padding: 35px 0 0;
+        height: 110px;
+    }
+    #portfolio .grid li .title .period {
+        font-size: 12px;
+        padding-top: 15px;
+    }
+    #portfolio .grid li .title .program {
+        font-size: 12px;
+        padding-top: 0px;
+    }
+
+    #contact {
+        margin-top: 70px;
+    }
+    #contact .ment{
+        font-size: 25px;
+        line-height: 32px;
+        margin-bottom: 20px;
+        letter-spacing: 10px;
+    }
+    #contact .ment .br{
+        display: block;
+    }
+
+    #contact .contact{
+        padding: 0 20px;
+        height: 600px;
+    }
+
+    #form {
+        padding-top: 25px;
+    }
+    #form .field > label{
+        font-size: 15px;
+        margin-right: 12px;
+    }
+    #form .field > input {
+        width: 205px;
+        font-size: 12px;
+    }
+    #form .field > #message {
+        width: 205px;
+        font-size: 12px;
+    }
+
+    #button {
+        width: 145px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 40px;
+    }
+
+    .contact .info {
+        margin-top: 30px;
+    }
+    .contact .address{
+        font-size: 10px;
+    }
+}
+
